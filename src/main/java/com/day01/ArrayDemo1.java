@@ -16,5 +16,7 @@ public class ArrayDemo1 {
         System.out.println("修改 scores[2] = 65");
         scores[2] = 65;
         System.out.printf("scores[2]: %d\n", scores[2]);
+        System.out.printf("scores 陣列長度: %d\n", scores.length);
+        System.out.printf("scores 陣列最大維度: %d\n", scores.length-1);
     }
 }
