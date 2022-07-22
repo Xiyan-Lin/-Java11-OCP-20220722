@@ -1,5 +1,7 @@
 package com.day01;
 
+import java.util.Arrays;
+
 public class ArrayDemo2 {
     public static void main(String[] args) {
         int[] scores = {100, 80, 90, 70, 50};
@@ -24,5 +26,12 @@ public class ArrayDemo2 {
             System.out.print(score + " "); // System.out.print(scores[i] + " ");
         }
         System.out.println();
+        // 不使用 for-loop 而使用 Arrays.stream() 串流
+        Arrays.stream(scores).forEach(score -> System.out.print(score + " "));
+        System.out.println();
+        // 簡化使用 Arrays.stream() 串流, 雙冒號 :: 方法參考
+        // 雙冒號 :: 方法參考, 漸少贅字程式碼, 讓程式碼一目了然(乾淨)
+        Arrays.stream(scores).forEach(System.out::println); // score -> System.out.println(score)
+        
     }
 }
