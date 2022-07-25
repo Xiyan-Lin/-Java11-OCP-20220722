@@ -15,6 +15,6 @@ public class StringEqualsDemo {
         System.out.printf("s1.equals(s4): %b\n", s1.equals(s4));
         // equalsIgnoreCase() 不分大小寫的比較
         System.out.printf("s1.equalsIgnoreCase(s5): %b\n", s1.equalsIgnoreCase(s5));
-        System.out.printf("s4.equalsIgnoreCase(s5): %b\n", s1.equalsIgnoreCase(s5));
+        System.out.printf("s4.equalsIgnoreCase(s5): %b\n", s4.equalsIgnoreCase(s5));
     }
 }
