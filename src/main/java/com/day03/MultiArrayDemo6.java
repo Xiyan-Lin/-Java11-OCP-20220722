@@ -1,6 +1,7 @@
 package com.day03;
 
 import java.util.Arrays;
+import java.util.function.Predicate;
 
 public class MultiArrayDemo6 {
     public static void main(String[] args) {
@@ -22,5 +23,16 @@ public class MultiArrayDemo6 {
               .flatMap(array -> Arrays.stream(array))
               .filter(x -> x != null)
               .forEach(x -> System.out.println(x));
+        // 使用 Java 8 Stream 簡化版(利用方法參考符 ::)
+        Predicate<Integer> notNull = x -> x != null;
+        Predicate<Integer> notNullAndMoreThan60 = x -> x != null && x > 60;
+        Predicate<Integer> moreThan60 = x -> x > 60;
+        Arrays.stream(m)
+              .flatMap(Arrays::stream)
+              //.filter(x -> x != null)
+              //.filter(notNullAndMoreThan60)
+              .filter(notNull)
+              .filter(moreThan60)  
+              .forEach(System.out::println);
     }
 }
