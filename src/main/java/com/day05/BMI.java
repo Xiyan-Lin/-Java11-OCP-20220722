@@ -14,6 +14,14 @@ public class BMI {
         this.weight = weight;
         // 計算 BMI
         this.value = weight / Math.pow(height/100, 2);
+        // 診斷訊息
+        if(this.value > 23) {
+            this.result = "過重";
+        } else if(this.value <= 18) {
+            this.result = "過輕";
+        } else {
+            this.result = "正常";
+        }
     }
     
     public void print() {
