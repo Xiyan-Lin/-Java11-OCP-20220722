@@ -46,4 +46,8 @@ public class Account {
     public Integer getBalance() {
         return this.balance;
     }
+    
+    public void print() {
+        System.out.printf("Account balance: $%,d\n", balance);
+    }
 }
