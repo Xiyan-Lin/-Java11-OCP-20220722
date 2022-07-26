@@ -7,6 +7,13 @@ public class BMI {
     Double value;   // 計算結果
     String result;  // 診斷訊息(正常,過重,過輕)
     
+    // 建構子
+    public BMI(String name, Double height, Double weight) {
+        this.name = name;
+        this.height = height;
+        this.weight = weight;
+    }
+    
     public void print() {
         System.out.printf("BMI 姓名: %s 身高: %.1f 體重: %.1f BMI值: %.2f 診斷: %s\n", 
                           name, height, weight, value, result);
