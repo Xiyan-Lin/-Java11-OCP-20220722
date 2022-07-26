@@ -12,6 +12,8 @@ public class BMI {
         this.name = name;
         this.height = height;
         this.weight = weight;
+        // 計算 BMI
+        this.value = weight / Math.pow(height/100, 2);
     }
     
     public void print() {
