@@ -10,6 +10,7 @@ public class AccountSystemTest {
         system.addAccount(7000);
         
         system.deposit(1, 3000);
+        system.deposit(100, 3000);
         
         system.withdraw(2, 2000);
         

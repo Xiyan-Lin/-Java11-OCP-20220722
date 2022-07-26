@@ -46,5 +46,9 @@ public class AccountSystem {
         accounts.forEach(Account::print);
     }
     
+    // 檢查帳號是否存在
+    private boolean exists(int index) {
+        return index >= 0 && index < accounts.size();
+    }
     
 }
