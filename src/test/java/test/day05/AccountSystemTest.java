@@ -11,6 +11,8 @@ public class AccountSystemTest {
         
         system.deposit(1, 3000);
         
+        system.withdraw(2, 2000);
+        
         //system.printAccount(0);
         
         system.printAllAccounts();
