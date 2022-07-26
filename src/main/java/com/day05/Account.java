@@ -9,9 +9,7 @@ public class Account {
     }
     
     public Account(Integer balance) {
-        if(balance >= 0) {
-            this.balance = balance;
-        }
+        setBalance(balance);
     }
     
     public void setBalance(Integer balance) {
