@@ -18,6 +18,20 @@ public class Account {
         }
     }
     
+    // 存款
+    public void deposit(Integer amount) {
+        if(amount > 0) {
+            this.balance += amount;
+        }
+    }
+    
+    // 提款
+    public void withdraw(Integer amount) {
+        if(amount > 0 && this.balance >= amount) {
+            this.balance -= amount;
+        }
+    }
+    
     public Integer getBalance() {
         return this.balance;
     }
