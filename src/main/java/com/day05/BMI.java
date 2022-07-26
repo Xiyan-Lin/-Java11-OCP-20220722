@@ -13,7 +13,19 @@ public class BMI {
         this.height = height;
         this.weight = weight;
         // 計算 BMI
+        calcValue();
+        // 診斷訊息
+        setResult();
+    }
+    
+    // 計算 BMI 值 (private 表示僅在該物件的內部使用)
+    private void calcValue() {
+        // 計算 BMI
         this.value = weight / Math.pow(height/100, 2);
+    }
+    
+    // 診斷訊息
+    private void setResult() {
         // 診斷訊息
         if(this.value > 23) {
             this.result = "過重";
