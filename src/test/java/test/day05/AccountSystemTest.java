@@ -9,6 +9,8 @@ public class AccountSystemTest {
         system.addAccount(5000);
         system.addAccount(7000);
         
+        system.printAccount(0);
+        
         system.printAllAccounts();
     }
 }

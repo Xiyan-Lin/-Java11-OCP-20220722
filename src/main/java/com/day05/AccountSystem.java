@@ -13,6 +13,12 @@ public class AccountSystem {
         accounts.add(account);
     }
     
+    // 5. 指定帳戶看餘額
+    public void printAccount(int index) {
+        accounts.get(index).print();
+    }
+    
+    // 6. 查看所有帳戶餘額
     public void printAllAccounts() {
         /*
         for(Account account : accounts) {
