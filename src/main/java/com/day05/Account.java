@@ -4,6 +4,16 @@ package com.day05;
 public class Account {
     private Integer balance;
     
+    public Account() {
+    
+    }
+    
+    public Account(Integer balance) {
+        if(balance >= 0) {
+            this.balance = balance;
+        }
+    }
+    
     public void setBalance(Integer balance) {
         if(balance >= 0) {
             this.balance = balance;
