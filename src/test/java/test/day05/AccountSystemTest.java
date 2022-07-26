@@ -13,6 +13,8 @@ public class AccountSystemTest {
         
         system.withdraw(2, 2000);
         
+        system.transfer(1000, 0, 2);
+        
         //system.printAccount(0);
         
         system.printAllAccounts();

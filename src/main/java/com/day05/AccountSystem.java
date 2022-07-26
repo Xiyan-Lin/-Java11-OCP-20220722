@@ -23,6 +23,12 @@ public class AccountSystem {
         accounts.get(index).withdraw(amount);
     }
     
+    //4. 指定轉帳
+    public void transfer(Integer amount, int fromIndex, int toIndex) {
+        Account from = accounts.get(fromIndex);
+        Account to = accounts.get(toIndex);
+        from.transfer(amount, to);
+    }
     
     // 5. 指定帳戶看餘額
     public void printAccount(int index) {
