@@ -1,11 +1,11 @@
 package com.day05;
 
 public class BMI {
-    String name;    // 姓名
-    Double height;  // 身高(cm)
-    Double weight;  // 體重(kg)
-    Double value;   // 計算結果
-    String result;  // 診斷訊息(正常,過重,過輕)
+    private String name;    // 姓名
+    private Double height;  // 身高(cm)
+    private Double weight;  // 體重(kg)
+    private Double value;   // 計算結果
+    private String result;  // 診斷訊息(正常,過重,過輕)
     
     // 建構子
     public BMI(String name, Double height, Double weight) {
