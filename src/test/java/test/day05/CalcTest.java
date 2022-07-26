@@ -8,8 +8,5 @@ public class CalcTest {
         int y = 5;
         System.out.println(Calc.add(x, y));
         System.out.println(Calc.mul(x, y));
-        
-        
-        
     }
 }
