@@ -32,6 +32,17 @@ public class Account {
         }
     }
     
+    // 轉帳
+    // amount: 轉帳金額
+    // to: 轉帳帳戶對象
+    public void transfer(Integer amount, Account to) {
+        if(amount <= this.balance) {
+            // 轉帳就是我提款,對方存款
+            withdraw(amount); // this.withdraw(amount);
+            to.deposit(amount);
+        }
+    }
+    
     public Integer getBalance() {
         return this.balance;
     }
