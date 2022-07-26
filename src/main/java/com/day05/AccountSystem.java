@@ -23,7 +23,7 @@ public class AccountSystem {
         accounts.get(index).withdraw(amount);
     }
     
-    //4. 指定轉帳
+    // 4. 指定轉帳
     public void transfer(Integer amount, int fromIndex, int toIndex) {
         Account from = accounts.get(fromIndex);
         Account to = accounts.get(toIndex);
