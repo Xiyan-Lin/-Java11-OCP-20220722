@@ -9,9 +9,14 @@ public class BMITest2 {
         BMI bmi2 = new BMI("Mary", 160.0, 48.0);
         BMI[] bmis = {bmi1, bmi2, new BMI("Helen", 155.0, 65.0)};
         System.out.printf("bmis length: %d\n", bmis.length);
-        // 請印出 bmi 的資料
+        // 請印出 bmi 的資料且是正常
         for(BMI bmi : bmis) {
-            bmi.print();
+            //bmi.result = "亂改結果";
+            //System.out.println(bmi.result);
+            //System.out.println(bmi.getResult());
+            if(bmi.getResult().equals("正常")) {
+                bmi.print();
+            }
         }
     }
 }

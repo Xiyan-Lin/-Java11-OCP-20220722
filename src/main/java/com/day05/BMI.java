@@ -18,6 +18,11 @@ public class BMI {
         setResult();
     }
     
+    // 公開取得 result 資料的方法
+    public String getResult() {
+        return result;
+    }
+    
     // 計算 BMI 值 (private 表示僅在該物件的內部使用)
     private void calcValue() {
         // 計算 BMI
