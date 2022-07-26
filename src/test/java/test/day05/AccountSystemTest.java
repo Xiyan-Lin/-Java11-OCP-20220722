@@ -9,7 +9,9 @@ public class AccountSystemTest {
         system.addAccount(5000);
         system.addAccount(7000);
         
-        system.printAccount(0);
+        system.deposit(1, 3000);
+        
+        //system.printAccount(0);
         
         system.printAllAccounts();
     }

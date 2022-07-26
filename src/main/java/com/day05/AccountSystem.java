@@ -12,6 +12,10 @@ public class AccountSystem {
         Account account = new Account(amount);
         accounts.add(account);
     }
+    // 2. 指定帳戶存款
+    public void deposit(int index, Integer amount) {
+        accounts.get(index).deposit(amount);
+    }
     
     // 5. 指定帳戶看餘額
     public void printAccount(int index) {
