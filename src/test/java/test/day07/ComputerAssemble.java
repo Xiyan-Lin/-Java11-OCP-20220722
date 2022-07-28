@@ -24,8 +24,13 @@ public class ComputerAssemble {
         computer.setCpu(cpu);
         computer.setRam(ram);
         computer.setSsd(ssd);
-        // 檢視電腦規格與價錢
+        // 檢視電腦規格
         System.out.println(computer);
         System.out.println(computer.toString());
+        // 計算電腦總價
+        int sum = computer.getCpu().getPrice() + 
+                  computer.getRam().getPrice() + 
+                  computer.getSsd().getPrice();
+        System.out.printf("電腦價格: $%,d\n", sum);
     }
 }
