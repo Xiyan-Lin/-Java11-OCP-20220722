@@ -4,6 +4,7 @@ import com.day05.Fund;
 
 public class FundTest {
     public static void main(String[] args) {
+        int x = 100;
         Fund fund = Fund.getFund();
         fund.donate(1000);
         
