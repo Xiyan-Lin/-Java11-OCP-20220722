@@ -1,5 +1,5 @@
 package com.day06;
 
-public class Foo {
+public class Foo extends Bar{
     
 }
