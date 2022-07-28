@@ -13,7 +13,8 @@ public class CalcTest {
         //-----------------------------------------
         int[] nums = {10, 20, 30, 40, 50, 60};
         System.out.println(Calc.add(nums));
-        
-        
+        System.out.println(Calc.add(new int[]{10, 20, 30, 40}));
+        System.out.println(Calc.add(10));
+        System.out.println(Calc.add());
     }
 }
