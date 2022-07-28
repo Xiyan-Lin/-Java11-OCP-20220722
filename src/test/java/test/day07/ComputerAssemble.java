@@ -3,6 +3,7 @@ package test.day07;
 // 組裝電腦
 
 import com.day07.CPU;
+import com.day07.Computer;
 import com.day07.SSD;
 import com.day07.RAM;
 
@@ -18,7 +19,13 @@ public class ComputerAssemble {
         SSD ssd = new SSD();
         ssd.setSize(512); // Gb
         ssd.setPrice(2000);
-        
-        
+        // 組裝電腦
+        Computer computer = new Computer();
+        computer.setCpu(cpu);
+        computer.setRam(ram);
+        computer.setSsd(ssd);
+        // 檢視電腦規格與價錢
+        System.out.println(computer);
+        System.out.println(computer.toString());
     }
 }

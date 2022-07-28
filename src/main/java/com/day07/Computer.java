@@ -29,7 +29,13 @@ public class Computer extends Machine { // 繼承 is-a
     public void setSsd(SSD ssd) {
         this.ssd = ssd;
     }
+    
+    // 改寫 Object 的 toString() 方法
 
+    @Override
+    public String toString() {
+        return "Computer{" + "cpu=" + cpu + ", ram=" + ram + ", ssd=" + ssd + '}';
+    }
     
     
 }

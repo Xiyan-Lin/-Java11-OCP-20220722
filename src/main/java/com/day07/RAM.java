@@ -10,6 +10,11 @@ public class RAM extends Hardware {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
+
+    @Override
+    public String toString() {
+        return "RAM{" + "capacity=" + capacity + '}';
+    }
     
     
 }

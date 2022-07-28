@@ -10,5 +10,10 @@ public class CPU extends Hardware {
     public void setSpeed(double speed) {
         this.speed = speed;
     }
+
+    @Override
+    public String toString() {
+        return "CPU{" + "speed=" + speed + '}';
+    }
     
 }
