@@ -26,7 +26,7 @@ public class ComputerAssemble {
         computer.setSsd(ssd);
         // 檢視電腦規格
         System.out.println(computer);
-        System.out.println(computer.toString());
+        //System.out.println(computer.toString());
         // 計算電腦總價
         int sum = computer.getCpu().getPrice() + 
                   computer.getRam().getPrice() + 
