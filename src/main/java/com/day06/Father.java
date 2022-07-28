@@ -2,8 +2,8 @@ package com.day06;
 
 public class Father {
     private int balance; // 銀行帳戶餘額
-    public Father(int balance) {
-        this.balance = balance;
+    public Father() {
+        this.balance = 100_0000;
     }
     public int getBalance() {
         return balance;
