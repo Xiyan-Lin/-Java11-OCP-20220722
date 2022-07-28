@@ -4,7 +4,7 @@ public class Computer extends Machine { // 繼承 is-a
     // has-a 組合
     private CPU cpu;
     private RAM ram;
-    private HD hd;
+    private SSD ssd;
 
     public CPU getCpu() {
         return cpu;
@@ -22,12 +22,14 @@ public class Computer extends Machine { // 繼承 is-a
         this.ram = ram;
     }
 
-    public HD getHd() {
-        return hd;
+    public SSD getSsd() {
+        return ssd;
     }
 
-    public void setHd(HD hd) {
-        this.hd = hd;
+    public void setSsd(SSD ssd) {
+        this.ssd = ssd;
     }
+
+    
     
 }

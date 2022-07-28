@@ -1,6 +1,6 @@
 package com.day07;
 
-public class HD extends Hardware {
+public class SSD extends Hardware {
     private int size;
 
     public int getSize() {
