@@ -11,7 +11,7 @@ public class Father {
     public void setBalance(int balance) {
         this.balance = balance;
     }
-    public void getTitle() { // 取得職銜
+    public void printTitle() { // 取得職銜
         System.out.println("ABC 股份有限公司總經理");
     }
 }
