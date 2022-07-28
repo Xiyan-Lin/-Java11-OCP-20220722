@@ -8,8 +8,11 @@ public class Sub extends Base {
     }
     public void access() {
         int value = 300;
-        System.out.println(value);
-        System.out.println(this.value);
-        System.out.println(super.value);
+        System.out.println(value); // 300
+        System.out.println(this.value); // 200
+        System.out.println(super.value); // 100
+        print(); // 執行 Sub(自己) 的 print() 的方法
+        this.print(); // 執行 Sub(自己) 的 print() 的方法
+        super.print(); // 執行 Base 的 print() 的方法
     }
 }
