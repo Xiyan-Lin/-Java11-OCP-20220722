@@ -3,6 +3,7 @@ package test.day08;
 import com.day08.Bird;
 import com.day08.Ostrich;
 import com.day08.Penguin;
+import java.util.stream.Stream;
 
 public class AnimalTest3 {
     public static void main(String[] args) {
@@ -15,5 +16,10 @@ public class AnimalTest3 {
             bird.move();
         }
         
+        Stream.of(new Bird(), new Ostrich(), new Penguin())
+              .forEach(bird -> bird.move());
+        
+        Stream.of(new Bird(), new Ostrich(), new Penguin())
+              .forEach(Bird::move);
     }
 }
