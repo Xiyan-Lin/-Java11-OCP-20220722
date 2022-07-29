@@ -17,7 +17,9 @@ public class AnimalTest {
         fish.move();
         bird.move();
         ostrich.move();
+        ostrich.action();
         penguin.move();
+        penguin.skill();
         
     }
 }
