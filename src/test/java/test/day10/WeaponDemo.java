@@ -6,6 +6,7 @@ import com.day10.Fighter;
 import com.day10.Tank;
 import com.day10.Truck;
 import com.day10.Weapon;
+import java.util.stream.Stream;
 
 public class WeaponDemo {
     public static void main(String[] args) {
@@ -18,6 +19,14 @@ public class WeaponDemo {
         
         Weapon weapon1 = new Tank("CM-11 虎式坦克");
         Weapon weapon2 = new Fighter("F-16 戰鬥機");
+        
+        Car[] cars = {car1, car2};
+        Airplane[] airplanes = {airplane1, airplane2, airplane3};
+        Weapon[] weapons = {weapon1, weapon2};
+        
+        Stream.of(cars).forEach(Car::move);
+        Stream.of(airplanes).forEach(Airplane::speed);
+        Stream.of(weapons).forEach(Weapon::shoot);
         
     }
 }
