@@ -9,6 +9,7 @@ public class AnimalTest4 {
         // 多型間的轉型
         Penguin penguin = new Penguin();
         Bird bird = new Penguin();
+        
         penguin.move();
         bird.move();
         penguin.skill();
