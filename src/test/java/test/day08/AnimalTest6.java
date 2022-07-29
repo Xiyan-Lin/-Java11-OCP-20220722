@@ -21,5 +21,16 @@ public class AnimalTest6 {
         Stream.of(animals)
               .forEach(Animal::move);
         System.out.println("----------------------------");
+        // 執行每一種是 Bird 的 move()
+        for(Animal animal : animals) {
+            if(animal instanceof Bird) {
+                animal.move();
+            }
+        }
+        System.out.println("----------------------------");
+        Stream.of(animals)
+              .filter(animal -> animal instanceof Bird)
+              .forEach(Animal::move);
+        
     }
 }
