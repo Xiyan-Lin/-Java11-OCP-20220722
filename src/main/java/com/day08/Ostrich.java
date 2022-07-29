@@ -6,4 +6,8 @@ public class Ostrich extends Bird {
         setName("鴕鳥");
     }
     
+    public void action() {
+        System.out.println("鴕鳥精神~");
+    }
+    
 }
