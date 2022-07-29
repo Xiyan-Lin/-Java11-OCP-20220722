@@ -9,5 +9,10 @@ public class AnimalTest5 {
         Penguin penguin = new Penguin();
         bird.move();
         penguin.move();
+        ((Bird)penguin).move();
+        
+        if(bird instanceof Penguin) {
+            ((Penguin)bird).move();
+        }
     }
 }
