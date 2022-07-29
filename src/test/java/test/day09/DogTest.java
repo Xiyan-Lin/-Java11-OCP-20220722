@@ -3,6 +3,7 @@ package test.day09;
 import com.day09.Chihuahua;
 import com.day09.Dog;
 import com.day09.Shiba;
+import java.util.stream.Stream;
 
 public class DogTest {
     public static void main(String[] args) {
@@ -18,5 +19,11 @@ public class DogTest {
         
         shiba.eat();
         chihuahua.eat();
+        //----------------------------------------
+        Dog dog1 = new Shiba();
+        Dog dog2 = new Chihuahua();
+        Dog[] dogs = {dog1, dog2};
+        Stream.of(dogs).forEach(Dog::play);
+        Stream.of(dogs).forEach(Dog::eat);
     }
 }
