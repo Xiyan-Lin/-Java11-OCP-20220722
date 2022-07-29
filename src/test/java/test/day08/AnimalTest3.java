@@ -1,7 +1,6 @@
 package test.day08;
 
 import com.day08.Bird;
-import com.day08.Fish;
 import com.day08.Ostrich;
 import com.day08.Penguin;
 
