@@ -1,6 +1,6 @@
 package com.day09;
 
-public class Shiba implements Dog {
+public class Shiba extends ADog {
     private String name;
     
     public Shiba() {
@@ -10,11 +10,6 @@ public class Shiba implements Dog {
     @Override
     public void play() {
         System.out.printf("%s 喜歡玩飛盤\n", name);
-    }
-
-    @Override
-    public void eat() {
-        System.out.println("吃狗食");
     }
     
 }

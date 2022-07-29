@@ -1,6 +1,6 @@
 package com.day09;
 
-public class Chihuahua implements Dog {
+public class Chihuahua extends ADog {
     private String name;
     
     public Chihuahua() {
@@ -12,9 +12,4 @@ public class Chihuahua implements Dog {
         System.out.printf("%s 很會叫\n", name);
     }
 
-    @Override
-    public void eat() {
-        System.out.println("吃狗食");
-    }
-    
 }
