@@ -6,4 +6,9 @@ public class Tiger extends Animal {
         super("老虎");
     }
     
+    @Override
+    public void move() {
+        System.out.printf("%s 很會跑\n", getName());
+    }
+    
 }

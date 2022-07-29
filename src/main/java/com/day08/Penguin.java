@@ -10,4 +10,9 @@ public class Penguin extends Bird {
         System.out.println("獵殺小魚");
     }
     
+    @Override
+    public void move() {
+        System.out.printf("%s 不會飛但很會游\n", getName());
+    }
+    
 }

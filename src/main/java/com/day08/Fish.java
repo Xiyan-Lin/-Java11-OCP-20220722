@@ -6,4 +6,10 @@ public class Fish extends Animal {
         super("魚");
     }
     
+    @Override
+    public void move() {
+        System.out.printf("%s 會游泳\n", getName());
+    }
+
+    
 }
