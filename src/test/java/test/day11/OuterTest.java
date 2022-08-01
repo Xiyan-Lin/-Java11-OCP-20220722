@@ -9,11 +9,15 @@ public class OuterTest {
         Outer.Inner in = ou.new Inner();
         in.print();
         */
-        /*
+        
         Outer.Inner in = new Outer().new Inner();
         in.print();
-        */
-        new Outer().new Inner().print();
+        
+        // new Outer().new Inner().print();
+        //------------------------------------------
+        
+        Outer.SInner sin = new Outer.SInner();
+        sin.print();
         
     }
 }
