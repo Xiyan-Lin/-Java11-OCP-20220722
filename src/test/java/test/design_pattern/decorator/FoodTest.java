@@ -23,6 +23,8 @@ public class FoodTest {
         food = new Onion(food);
         food = new Onion(food);
         food = new Onion(food);
+        food = new Lettuce(food);
+        food = new Lettuce(food);
         
         // 顯示麵包中的所有配料與總價
         System.out.printf("食料: %s\n", food.getName());
