@@ -50,6 +50,4 @@ public class Car {
         return "Car{" + "wheel=" + wheel + ", door=" + door + ", cc=" + cc + ", color=" + color + '}';
     }
     
-    
-    
 }
