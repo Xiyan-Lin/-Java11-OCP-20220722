@@ -16,7 +16,12 @@ public class DogTest {
         };
         dog.skill();
         
+        // 使用 Java 8 Lambda 實現 FunctionalInterface 介面, 例如: Dog
+        Dog dog2 = () -> { System.out.println("玩球"); };
+        dog2.skill();
         
+        Dog dog3 = () -> System.out.println("玩手機");
+        dog3.skill();
         
     }
 }
