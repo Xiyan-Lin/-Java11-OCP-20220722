@@ -38,5 +38,8 @@ public class FunctionTest3 {
         BiFunction<String, Integer, Boolean> exam = (subject, score) -> score >= 60;
         System.out.println(exam.apply("國文", 85));
         
+        //BiFunction<Integer, Integer, Integer> rect2 = (w, h) -> 2 * (w + h);
+        BinaryOperator<Integer> rect2 = (w, h) -> 2 * (w + h);
+        System.out.println(rect2.apply(10, 5));
     }
 }
