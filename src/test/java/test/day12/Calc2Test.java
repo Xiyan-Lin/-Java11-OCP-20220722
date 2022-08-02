@@ -39,6 +39,10 @@ public class Calc2Test {
                 .forEach(System.out::println);
                 
         // 2. 求整體平均 bmi
-        
+        double bmiAvg = Stream.of(array)
+                        .mapToDouble(row -> bmi.get(row[0], row[1]))
+                        .average()
+                        .getAsDouble();
+        System.out.println(bmiAvg);
     }
 }
