@@ -2,7 +2,7 @@ package test.day13;
 
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
-
+import java.util.function.BiFunction;
 /*
 @FunctionalInterface
 public interface Function<T, R> {
@@ -13,6 +13,12 @@ public interface Function<T, R> {
 public interface UnaryOperator<T> extends Function<T, T> {
     
 }
+
+@FunctionalInterface
+public interface BiFunction<T, U, R> {
+    R apply(T t, U u);
+}
+
 */
 public class FunctionTest3 {
     public static void main(String[] args) {
@@ -22,5 +28,8 @@ public class FunctionTest3 {
         //Function<Integer, Integer> rect = (x) -> 4 * x;
         UnaryOperator<Integer> rect = (x) -> 4 * x; 
         System.out.println(rect.apply(10));
+        
+        BiFunction<String, Integer, Boolean> exam = (subject, score) -> score >= 60;
+        System.out.println(exam.apply("國文", 85));
     }
 }
