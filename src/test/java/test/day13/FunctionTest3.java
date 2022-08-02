@@ -18,5 +18,9 @@ public class FunctionTest3 {
     public static void main(String[] args) {
         Function<Integer, Double> area = (r) -> r * r * Math.PI;
         System.out.println(area.apply(10));
+        
+        //Function<Integer, Integer> rect = (x) -> 4 * x;
+        UnaryOperator<Integer> rect = (x) -> 4 * x; 
+        System.out.println(rect.apply(10));
     }
 }
