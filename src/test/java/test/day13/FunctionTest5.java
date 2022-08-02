@@ -15,7 +15,7 @@ public class FunctionTest5 {
         System.out.println(avg);
         //----------------------------------------------------------------------
         Predicate<String> notNull = n -> n != null;
-        ToIntFunction<String> nameLength = n -> n.length();
+        ToIntFunction<String> nameLength = String::length; // n -> n.length();
         double avg2 = Arrays.stream(names)
                             .filter(notNull)
                             .mapToInt(nameLength)
