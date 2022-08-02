@@ -4,6 +4,7 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
+import java.util.function.IntUnaryOperator;
 
 /*
 @FunctionalInterface
@@ -32,8 +33,10 @@ public class FunctionTest3 {
         System.out.println(area.apply(10));
         
         //Function<Integer, Integer> rect = (x) -> 4 * x;
-        UnaryOperator<Integer> rect = (x) -> 4 * x; 
-        System.out.println(rect.apply(10));
+        //UnaryOperator<Integer> rect = (x) -> 4 * x; 
+        //System.out.println(rect.apply(10));
+        IntUnaryOperator rect = (x) -> 4 * x; 
+        System.out.println(rect.applyAsInt(10));
         
         BiFunction<String, Integer, Boolean> exam = (subject, score) -> score >= 60;
         System.out.println(exam.apply("國文", 85));
