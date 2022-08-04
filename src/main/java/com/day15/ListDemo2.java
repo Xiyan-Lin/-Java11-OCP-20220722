@@ -11,6 +11,7 @@ public class ListDemo2 {
         queue.offer("B");
         queue.offer("C");
         System.out.println(queue);
+        /*
         System.out.println(queue.poll()); // 取得元素
         System.out.println(queue);
         System.out.println(queue.poll()); // 取得元素
@@ -18,6 +19,11 @@ public class ListDemo2 {
         System.out.println(queue.poll()); // 取得元素
         System.out.println(queue);
         System.out.println(queue.poll()); // 取得元素
+        System.out.println(queue);
+        */
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll()); // 取得元素
+        }
         System.out.println(queue);
         
     }
