@@ -27,9 +27,12 @@ public class SetAndListDemo {
         // 請問有幾注 ?
         System.out.printf("注數: %d\n", lottos.size());
         // 列出每一注資料
-        lottos.forEach(System.out::println);
+        lottos.stream()
+              .forEach(System.out::println);
         // 列出每一注平均數值
-        
+        lottos.stream()
+              .mapToDouble(lotto -> lotto.stream().mapToInt(Integer::intValue).average().getAsDouble())
+              .forEach(System.out::println);
     }
     
     private static Set getLottoSet() {
