@@ -32,5 +32,7 @@ public class SetDemo5 {
         // SortedSet 有支援 subSet() 取出部分集合
         System.out.println(set3.subSet(70, 100)); // from(含), to(不含)
         System.out.println(set3.tailSet(90)); // from(含) 到最末的元素
+        System.out.println(set3.first());
+        System.out.println(set3.last());
     }
 }
