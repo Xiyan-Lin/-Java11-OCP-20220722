@@ -6,6 +6,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.Random;
+import java.util.function.ToDoubleFunction;
 
 public class SetAndListDemo {
     // 複合集合 List<Set<Integer>>
@@ -29,10 +30,16 @@ public class SetAndListDemo {
         // 列出每一注資料
         lottos.stream()
               .forEach(System.out::println);
-        // 列出每一注平均數值
+        // 列出每一注平均數值 I
         lottos.stream()
               .mapToDouble(lotto -> lotto.stream().mapToInt(Integer::intValue).average().getAsDouble())
               .forEach(System.out::println);
+        // 列出每一注平均數值 II
+        ToDoubleFunction<Set<Integer>> lottoAvg = lotto -> lotto.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        lottos.stream()
+              .mapToDouble(lottoAvg)
+              .forEach(System.out::println);  
+        
     }
     
     private static Set getLottoSet() {
