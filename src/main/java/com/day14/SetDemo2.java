@@ -34,5 +34,17 @@ public class SetDemo2 {
             }
         }
         System.out.println(set);
+        // 計算總分
+        int sum = 0;
+        iter = set.iterator(); // 重新取得 iterator 物件
+        while (iter.hasNext()) {
+            Object obj = iter.next();
+            if (obj instanceof Integer) {
+                // 1. obj 轉為 Integer 物件
+                // 2. 並透過 unboxing 轉為 int 再給 sum 進行累加
+                sum += (Integer)obj; 
+            }
+        }
+        System.out.println(sum);
     }
 }
