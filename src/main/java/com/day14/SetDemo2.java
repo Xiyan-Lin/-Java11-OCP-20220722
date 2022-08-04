@@ -25,5 +25,14 @@ public class SetDemo2 {
             }
         }
         System.out.println(set);
+        // 想要把 String 元素移除
+        iter = set.iterator(); // 重新取得 iterator 物件
+        while (iter.hasNext()) {
+            Object obj = iter.next();
+            if(obj instanceof String) {
+                iter.remove();
+            }
+        }
+        System.out.println(set);
     }
 }
