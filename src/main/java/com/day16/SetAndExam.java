@@ -15,6 +15,12 @@ public class SetAndExam {
         exams.add(exam3);
         System.out.println(exams);
         System.out.println(exams.size());
-        
+        // 請計算平均成績 = ?
+        double avg = exams.stream()
+                          //.mapToInt(exam -> exam.getScore())
+                          .mapToInt(Exam::getScore)
+                          .average()
+                          .getAsDouble();
+        System.out.println(avg);
     }
 }
