@@ -17,10 +17,13 @@ public class ListDemo5 {
         List<Integer> list2 = new ArrayList<>();
         
         // 支援多執行緒的集合(Thread-safe)
-        Vector<Integer> list3 = new Vector<>();
-        for(int i=0;i<10;i++) {
+        // Vector(int initialCapacity, int capacityIncrement)
+        //            預設容器空間           每次超過後新增數量
+        Vector<Integer> list3 = new Vector<>(41, 5);
+        for(int i=0;i<41;i++) {
             list3.add(i);
         }
+        list3.add(100); // 意外新增一筆
         System.out.printf("capacity(空間): %d\n" , list3.capacity());
         System.out.printf("size(已使用): %d\n" , list3.size());
     }
