@@ -1,5 +1,6 @@
 package com.day14;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -34,5 +35,15 @@ public class SetDemo5 {
         System.out.println(set3.tailSet(90)); // from(含) 到最末的元素
         System.out.println(set3.first());
         System.out.println(set3.last());
+        
+        // 比較二元素內容大小
+        // o1-o2 由小到大
+        // o2-o1 由大到小
+        Comparator<Integer> comparator = (o1, o2) -> o2-o1;
+        SortedSet set4 = new TreeSet(comparator);
+        set4.add(90);
+        set4.add(100);
+        set4.add(70);
+        System.out.println(set4);
     }
 }
