@@ -3,6 +3,7 @@ package com.day14;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class SetDemo5 {
@@ -23,10 +24,13 @@ public class SetDemo5 {
         set2.add(70);
         System.out.println(set2); // [90, 100, 70] 有序的集合(與加入順序相同)
         
-        Set set3 = new TreeSet();
+        SortedSet set3 = new TreeSet();
         set3.add(90);
         set3.add(100);
         set3.add(70);
         System.out.println(set3); // [70, 90, 100] 支援排序的集合(小 -> 大)
+        // SortedSet 有支援 subSet() 取出部分集合
+        System.out.println(set3.subSet(70, 100)); // from(含), to(不含)
+        System.out.println(set3.tailSet(90)); // from(含) 到最末的元素
     }
 }
