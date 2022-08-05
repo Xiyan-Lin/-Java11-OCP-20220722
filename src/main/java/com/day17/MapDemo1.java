@@ -69,7 +69,7 @@ public class MapDemo1 {
                                .stream()
                                .filter(e -> e.getValue() == 100)
                                .map(Entry::getKey)
-                               .collect(Collectors.toSet());
+                               .collect(Collectors.toSet()); // 收集器
         System.out.println(names);
     }
 }
