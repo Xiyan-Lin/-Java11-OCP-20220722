@@ -31,5 +31,8 @@ public class GroupingByDemo2 {
         Map<String, Integer> sum = fruits.stream()
                 .collect(groupingBy(Fruit::getName, summingInt(Fruit::getQty)));
         System.out.println(sum);
+        
+        // 每種水果各有幾顆並由大(數量多)到小(數量少)排序 ?
+        
     }
 }
