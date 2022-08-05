@@ -3,6 +3,8 @@ package com.day17;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class MapDemo1 {
     public static void main(String[] args) {
@@ -28,5 +30,29 @@ public class MapDemo1 {
         } else {
             System.out.println("value 90 不存在");
         }
+        // 1. 透過 keySet() + for/each(in) 來計算總分
+        // 透過 keySet() 的到 [甲, 乙, 丙]
+        // 再透過 map.get(Key) 得到每一個 Key 的 Value
+        Set<String> keys = map.keySet();
+        int sum = 0;
+        for(String key : keys) {
+            System.out.printf("key: %s value: %d\n", key, map.get(key));
+            sum += map.get(key);
+        }
+        System.out.println(sum);
+        // 2. 透過 values() + stream() 來計算總分
+        int sum2 = map.values() // 得到 Collection 物件
+                      .stream() // 調用 stream() 方法 (Java 8 以後每一個 Collection 物件一定都有 stream() 方法)
+                      .mapToInt(Integer::intValue)
+                      .sum();
+        System.out.println(sum2);
+        // 3. 透過 entrySet() + stream() 來計算總分
+        int sum3 = map.entrySet()
+                      .stream()
+                      //.mapToInt(e -> e.getValue().intValue())
+                      //.mapToInt(e -> e.getValue()) // auto-unboxing
+                      .mapToInt(Entry::getValue)
+                      .sum();
+        System.out.println(sum3);
     }
 }
