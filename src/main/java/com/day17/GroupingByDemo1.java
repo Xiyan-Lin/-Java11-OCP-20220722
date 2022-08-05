@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import static java.util.Arrays.asList;
+import java.util.LinkedHashMap;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.counting;
 import static java.util.function.Function.identity;
@@ -22,7 +23,14 @@ public class GroupingByDemo1 {
               .stream()
               .sorted(Entry.<String, Long>comparingByValue().reversed())
               .forEachOrdered(e -> System.out.println(e));
-                
+        
+        // 將排序後的結果放到 Map<String, Long> finalMap = new LinkedHashMap() 中
+        Map<String, Long> finalMap = new LinkedHashMap();
+        result.entrySet()
+              .stream()
+              .sorted(Entry.<String, Long>comparingByValue().reversed())
+              .forEachOrdered(e -> finalMap.put(e.getKey(), e.getValue()));
+        System.out.println(finalMap);
                 
     }
 }
