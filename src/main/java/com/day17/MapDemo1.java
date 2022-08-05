@@ -55,6 +55,12 @@ public class MapDemo1 {
                       .sum();
         System.out.println(sum3);
         // 4. 請問 value = 100 有哪些 key ?
-        
+        map.entrySet()
+           .stream()
+           //.filter(e -> e.getValue().intValue() == 100)
+           .filter(e -> e.getValue() == 100)
+           //.map(e -> e.getKey())
+           .map(Entry::getKey)
+           .forEach(System.out::println);
     }
 }
