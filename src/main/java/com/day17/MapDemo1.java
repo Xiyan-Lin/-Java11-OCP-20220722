@@ -54,5 +54,7 @@ public class MapDemo1 {
                       .mapToInt(Entry::getValue)
                       .sum();
         System.out.println(sum3);
+        // 4. 請問 value = 100 有哪些 key ?
+        
     }
 }
