@@ -33,6 +33,10 @@ public class GroupingByDemo2 {
         System.out.println(sum);
         
         // 每種水果各有幾顆並由大(數量多)到小(數量少)排序 ?
+        sum.entrySet() // {papaya=20, orange=10, banana=30, apple=40, watermelon=10}
+           .stream()
+           .sorted(Entry.<String, Integer>comparingByValue().reversed())
+           .forEachOrdered(e -> System.out.println(e));
         
     }
 }
