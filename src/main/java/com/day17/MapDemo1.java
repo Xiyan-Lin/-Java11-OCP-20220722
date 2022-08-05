@@ -1,5 +1,6 @@
 package com.day17;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -62,5 +63,13 @@ public class MapDemo1 {
            //.map(e -> e.getKey())
            .map(Entry::getKey)
            .forEach(System.out::println);
+        
+        // 5. 請問 value = 100 有哪些 key 並存放到集合中?
+        Set<String> names = map.entrySet()
+                               .stream()
+                               .filter(e -> e.getValue() == 100)
+                               .map(Entry::getKey)
+                               .collect(Collectors.toSet());
+        System.out.println(names);
     }
 }
