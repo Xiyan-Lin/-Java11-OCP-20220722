@@ -3,9 +3,11 @@ package com.day17;
 // 樂透號碼分類
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
 import static java.util.function.Function.identity;
@@ -16,7 +18,7 @@ import java.util.stream.IntStream;
 
 public class GroupingByDemo4 {
     public static void main(String[] args) {
-        List<Set<Integer>> lottos = getLottos(10); // 取得幾注的 539 號碼
+        List<Set<Integer>> lottos = getLottos(100); // 取得幾注的 539 號碼
         System.out.println(lottos);
         // 每一個號碼出現過幾次?
         // 1. 將所有號碼匯集在一起
@@ -29,7 +31,11 @@ public class GroupingByDemo4 {
         System.out.println(result);
         
         // 3. 根據出現次數多寡排序
-        
+        Map<Integer, Long> result2 = new LinkedHashMap<>();
+        result.entrySet().stream()
+                .sorted(Entry.<Integer, Long>comparingByValue().reversed())
+                .forEachOrdered(e -> result2.put(e.getKey(), e.getValue()));
+        System.out.println(result2);
     }
     
     public static List<Set<Integer>> getLottos(int amount) {
