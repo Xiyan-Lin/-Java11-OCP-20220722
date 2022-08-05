@@ -16,5 +16,17 @@ public class MapDemo1 {
         System.out.println(map.get("丁"));
         System.out.println(map.keySet());
         System.out.println(map.values());
+        // 指定的key值是否存在 ?
+        if(map.containsKey("丁")) {
+            System.out.println("key 丁 存在, value = " + map.get("丁"));
+        } else {
+            System.out.println("key 丁 不存在");
+        }
+        // 指定的value值是否存在 ?
+        if(map.containsValue(90)) {
+            System.out.println("value 90 存在");
+        } else {
+            System.out.println("value 90 不存在");
+        }
     }
 }
