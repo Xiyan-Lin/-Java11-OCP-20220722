@@ -10,5 +10,7 @@ import static java.util.stream.Collectors.counting;
 import static java.util.function.Function.identity;
 
 public class GroupingByDemo2 {
-    
+    public static void main(String[] args) {
+        
+    }
 }
