@@ -7,12 +7,17 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import static java.util.stream.Collectors.toList;
 import java.util.stream.IntStream;
 
 public class GroupingByDemo4 {
     public static void main(String[] args) {
         List<Set<Integer>> lottos = getLottos(10); // 取得幾注的 539 號碼
         System.out.println(lottos);
+        // 每一個號碼出現過幾次?
+        // 1. 將所有號碼匯集在一起
+        List<Integer> nums = lottos.stream().flatMap(lotto -> lotto.stream()).collect(toList());
+        System.out.println(nums);
     }
     
     public static List<Set<Integer>> getLottos(int amount) {
