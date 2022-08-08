@@ -10,6 +10,8 @@ public class MyFinanceDemo2 {
         // 連續查多組商品
         find("2330.TW");
         find("2317.TW");
+        find("USDTWD=x"); // 美金兌台幣 x 表示 Exchange (匯率: eXchange)
+        find("JPYTWD=x"); // 日幣兌台幣
     }
     
     public static void find(String symbol) {
@@ -21,7 +23,7 @@ public class MyFinanceDemo2 {
             }
             double price =stock.getQuote().getPrice().doubleValue();
             System.out.printf("商品代號: %s ", symbol); 
-            System.out.printf("目前價格: %.1f\n", price); 
+            System.out.printf("目前價格: %.3f\n", price); 
         } catch (IOException e) {
             System.out.println("錯誤訊息: " + e);
         }
