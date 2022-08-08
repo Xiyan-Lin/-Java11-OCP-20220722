@@ -5,7 +5,7 @@ import yahoofinance.Stock;
 import yahoofinance.YahooFinance;
 
 public class MyFinanceDemo6 {
-
+    
     public static void main(String[] args) {
         try {
             // 連續查多組商品
