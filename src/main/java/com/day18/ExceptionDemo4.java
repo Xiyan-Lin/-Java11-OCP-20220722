@@ -9,8 +9,14 @@ public class ExceptionDemo4 {
         int x = 10; // 分子
         System.out.print("分子固定是10, 請輸入一個數字當分母: ");
         Scanner scanner = new Scanner(System.in);
-        int y = scanner.nextInt(); // 得到使用者所輸入的內容
-        // 檢查 y 是否 = 0 ?
+        String data = scanner.next(); // 得到使用者所輸入的字串內容
+        // 檢查一: 是否輸入的是數字 ?
+        if(!data.matches("\\d+")) { // 若不是數字資料
+            System.out.println("請輸入數字");
+            return;
+        }
+        int y = Integer.parseInt(data); // 字串轉數字
+        // 檢查二: y 是否 = 0 ?
         if(y == 0) {
             System.out.println("分母不可 = 0");
             return; // 當下所執行的方法強制提前結束
