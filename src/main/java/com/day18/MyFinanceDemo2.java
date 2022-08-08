@@ -21,9 +21,11 @@ public class MyFinanceDemo2 {
                 System.out.println("無此商品");
                 return;
             }
-            double price =stock.getQuote().getPrice().doubleValue();
+            double price = stock.getQuote().getPrice().doubleValue();
+            String time = stock.getQuote().getLastTradeTime().getTime().toString();
             System.out.printf("商品代號: %s ", symbol); 
-            System.out.printf("目前價格: %.3f\n", price); 
+            System.out.printf("目前價格: %.3f ", price); 
+            System.out.printf("交易時間: %s\n", time); 
         } catch (IOException e) {
             System.out.println("錯誤訊息: " + e);
         }
