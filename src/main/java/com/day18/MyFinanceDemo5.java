@@ -9,7 +9,7 @@ public class MyFinanceDemo5 {
     public static void main(String[] args) {
         try {
             // 連續查多組商品
-            find("2330.TW");
+            find("2330.TW1");
         } catch (IOException ex) {
             System.out.println("錯誤訊息: " + ex);
         } catch (SymbolNotFoundException e) {
