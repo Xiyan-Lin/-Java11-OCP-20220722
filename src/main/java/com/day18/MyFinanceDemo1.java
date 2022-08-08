@@ -8,6 +8,10 @@ public class MyFinanceDemo1 {
     public static void main(String[] args) {
         try {
             Stock stock = YahooFinance.get("2330.TW");
+            if(stock == null) {
+                System.out.println("無此商品");
+                return;
+            }
             String symbol = stock.getSymbol(); // 商品代號
             String name = stock.getName(); // 商品名稱/公司名稱
             double price = stock.getQuote().getPrice().doubleValue(); // 目前價格
