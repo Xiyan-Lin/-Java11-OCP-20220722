@@ -2,11 +2,14 @@ package com.day20;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class SharedBall implements Runnable {
-    private int i = 1000;
-    private Map<String, Integer> map = new LinkedHashMap<>();
-    
+    private int i;
+    private Map<String, Integer> map = new TreeMap<>();
+    public SharedBall(int i) {
+        this.i = i;
+    }
     @Override
     public void run() {
         while(pickUp()) {
