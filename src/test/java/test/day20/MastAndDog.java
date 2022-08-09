@@ -9,7 +9,8 @@ public class MastAndDog {
         Cookies cookies = new Cookies();
         Thread master = new Thread(new Master(cookies));
         Thread dog = new Thread(new Dog(cookies));
-        master.start();
         dog.start();
+        master.start();
+        
     }
 }
