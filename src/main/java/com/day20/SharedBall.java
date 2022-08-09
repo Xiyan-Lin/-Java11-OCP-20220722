@@ -10,7 +10,8 @@ public class SharedBall implements Runnable {
         }
     }
     
-    public boolean pickUp() {
+    public synchronized boolean pickUp() {
+        if(i <= 0) return true;
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 拿了第 %d 號球\n", tName, i);
         i = i - 1;
