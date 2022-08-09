@@ -14,7 +14,7 @@ public class SharedBall implements Runnable {
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 拿了第 %d 號球\n", tName, i);
         i = i - 1;
-        return i == 0;
+        return i > 0;
     }
     
 }
