@@ -1,4 +1,4 @@
-package test.day19;
+package test.day20;
 
 import com.day20.SharedBall;
 
