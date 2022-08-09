@@ -24,8 +24,5 @@ public class SkyLight extends Thread {
         }
         // 回家
         System.out.printf("%s 返程結束美好的一天\n", tName);
-        
     }
-    
-    
 }
