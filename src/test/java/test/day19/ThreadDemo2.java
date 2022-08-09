@@ -10,6 +10,10 @@ public class ThreadDemo2 {
         Coding coding = new Coding();
         Sales sales = new Sales();
         Clean clean = new Clean();
+        // 設定執行緒名稱
+        coding.setName("小明");
+        sales.setName("老王");
+        clean.setName("張三");
         // 調用 start() 才可以進入自動排程執行模式 = 多執行緒模式
         coding.start();
         sales.start();
