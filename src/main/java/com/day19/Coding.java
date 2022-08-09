@@ -6,6 +6,7 @@ public class Coding extends Thread {
     public void run() {
         job();
     }
+    
     public void job() {
         String tName = Thread.currentThread().getName(); // 取得執行緒名稱
         for(int i=1;i<=1000;i++) {
