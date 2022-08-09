@@ -1,7 +1,7 @@
 package com.day19;
 
-public class Rabbit implements Runnable {
-
+public class Race implements Runnable {
+    
     @Override
     public void run() {
         String tName = Thread.currentThread().getName(); // 取得執行緒名稱
