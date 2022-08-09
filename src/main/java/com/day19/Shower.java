@@ -8,6 +8,11 @@ class Father extends Thread {
         Worker worker = new Worker(); // 建立瓦斯工人執行緒
         worker.start(); // 瓦斯工人執行送瓦斯任務
         
+        try {
+            worker.join(); // worker.join(設定最大等待時間(ms));
+        } catch (InterruptedException e) {
+        }
+        
         System.out.println("爸爸開始洗澡");
         System.out.println("爸爸洗完澡了");
     }
