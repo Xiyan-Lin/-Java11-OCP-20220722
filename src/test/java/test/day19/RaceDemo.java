@@ -7,6 +7,8 @@ public class RaceDemo {
         // 任務建立
         Race turtle = new Race();
         Race rabbit = new Race();
+        Race dog = new Race();
+        Race cat = new Race();
         // 將任務注入到執行緒中
         Thread t1 = new Thread(turtle, "烏龜");
         Thread t2 = new Thread(rabbit, "兔子");
