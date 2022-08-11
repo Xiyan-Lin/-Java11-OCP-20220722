@@ -123,4 +123,12 @@ where p.ID = cp.PERSON_ID and cp.COURSE_ID = c.ID
 group by p.USERNAME
 order by total desc;  -- desc 大->小排序, asc(預設) 小->大排序
 
+-- 查出哪一個課程賣最好?總共賣出多少錢?
+select c."NAME", sum(c.PRICE) as total
+from course_person_ref cp, course c, person p
+where cp.COURSE_ID = c.ID and cp.PERSON_ID = p.ID
+group by c."NAME"
+order by total
+fetch first 1 rows only
+
 </pre>
