@@ -128,7 +128,7 @@ select c."NAME", sum(c.PRICE) as total
 from course_person_ref cp, course c, person p
 where cp.COURSE_ID = c.ID and cp.PERSON_ID = p.ID
 group by c."NAME"
-order by total
+order by total desc
 fetch first 1 rows only
 
 </pre>
