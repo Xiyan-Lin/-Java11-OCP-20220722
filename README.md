@@ -43,4 +43,25 @@ update person set age = 21, password = 'aaaa' where id = 2;
 -- 刪除 person 紀錄
 delete from person where id = 4;
 
+-- 建立 course_person_ref 關聯資料表
+create table course_person_ref(
+    id int not null generated always as identity,
+    course_id int not null,
+    person_id int not null,
+    primary key(id),
+    constraint course_id_fk foreign key (course_id) references course(id),
+    constraint person_id_fk foreign key (person_id) references person(id)
+);
+
+-- 新增 course_person_ref 關聯資料表紀錄
+insert into course_person_ref(course_id, person_id) values(1, 1);
+insert into course_person_ref(course_id, person_id) values(3, 2);
+insert into course_person_ref(course_id, person_id) values(2, 2);
+insert into course_person_ref(course_id, person_id) values(4, 3);
+insert into course_person_ref(course_id, person_id) values(2, 1);
+insert into course_person_ref(course_id, person_id) values(1, 1);
+
+-- 資料表改名
+RENAME TABLE cource_person_ref TO course_person_ref;
+
 </pre>
