@@ -142,4 +142,14 @@ fetch first 1 rows only;
 select c."NAME", c.PRICE/c.HOURS as average
 from course c
 
+-- 查出所有人的上課總費用各是多少 ?
+select p.USERNAME, sum(c.PRICE) as total, count(p.USERNAME) as count
+from person p, course_person_ref cp, course c
+where p.ID = cp.PERSON_ID and cp.COURSE_ID = c.ID
+group by p.USERNAME
+order by total desc;
+
+-- 查出所有人的上課總費用各是多少(使用 View) ?
+select * from TOTAL_COURSE_BY_PERSON_VIEW;
+
 </pre>
