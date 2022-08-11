@@ -94,4 +94,13 @@ select cp.PERSON_ID, p.USERNAME, c."NAME"
 from course_person_ref cp, course c, Person p
 where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID and cp.PERSON_ID = p.ID;
 
+-- 查出 person.id = 2 的人上課總時數
+select c.HOURS
+from course_person_ref cp, course c
+where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID;
+
+select sum(c.HOURS) as total
+from course_person_ref cp, course c
+where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID;
+
 </pre>
