@@ -6,11 +6,11 @@ Derby 資料庫下載
 https://db.apache.org/derby/derby_downloads.html
 
 pom.xml 依賴配置
-&lt;dependency>
-    &lt;groupId>org.apache.derby&lt;/groupId>
-    &lt;artifactId>derby&lt;/artifactId>
-    &lt;version>10.14.2.0&lt;/version>
-&lt;/dependency>
+<dependency>
+    <groupId>org.apache.derby</groupId>
+    <artifactId>derby</artifactId>
+    <version>10.14.2.0</version>
+</dependency>
 
 SQL 語法 for Derby 資料庫
 https://www.tutorialspoint.com/apache_derby/apache_derby_create_table.htm
@@ -42,6 +42,21 @@ update person set age = 21, password = 'aaaa' where id = 2;
 
 -- 刪除 person 紀錄
 delete from person where id = 4;
+
+-- 建立 cource 資料表
+create table course(
+    id int not null generated always as identity,
+    name varchar(50) not null,
+    hours int not null,
+    price int not null,
+    primary key(id)
+);
+
+-- 新增 course 資料紀錄
+insert into course(name, hours, price) values('Java', 50, 10000);
+insert into course(name, hours, price) values('Python', 40, 8000);
+insert into course(name, hours, price) values('MySQL', 30, 7000);
+insert into course(name, hours, price) values('ART', 35, 5000);
 
 -- 建立 course_person_ref 關聯資料表
 create table course_person_ref(
