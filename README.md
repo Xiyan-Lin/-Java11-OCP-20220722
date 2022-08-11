@@ -138,4 +138,8 @@ group by c."NAME"
 order by total desc
 fetch first 1 rows only;
 
+-- 查出每一個課程的平均每小時是多少錢
+select c."NAME", c.PRICE/c.HOURS as average
+from course c
+
 </pre>
