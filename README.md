@@ -103,4 +103,9 @@ select sum(c.HOURS) as total
 from course_person_ref cp, course c
 where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID;
 
+-- 查出 person.id = 2 的人上課總費用
+select sum(c.PRICE) as total
+from course_person_ref cp, course c
+where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID;
+
 </pre>
