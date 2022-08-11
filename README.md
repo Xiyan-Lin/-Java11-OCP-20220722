@@ -79,4 +79,19 @@ insert into course_person_ref(course_id, person_id) values(1, 1);
 -- 資料表改名
 RENAME TABLE cource_person_ref TO course_person_ref;
 
+-- 查出購買 course.id = 2 的人名
+select cp.COURSE_ID, p.USERNAME 
+from course_person_ref cp, person p
+where cp.COURSE_ID = 2 and cp.PERSON_ID = p.ID;
+
+-- 查出 person.id = 2 有買那些課程 ?
+select cp.PERSON_ID, c."NAME"
+from course_person_ref cp, course c
+where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID;
+
+-- 查出 person.id = 2 的人名並找出他有買那些課程 ?
+select cp.PERSON_ID, p.USERNAME, c."NAME"
+from course_person_ref cp, course c, Person p
+where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID and cp.PERSON_ID = p.ID;
+
 </pre>
