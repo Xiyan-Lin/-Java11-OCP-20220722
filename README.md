@@ -129,6 +129,13 @@ from course_person_ref cp, course c
 where cp.COURSE_ID = c.ID
 group by c."NAME"
 order by total desc
-fetch first 1 rows only
+fetch first 1 rows only;
+
+select c."NAME", sum(c.PRICE) as total
+from course_person_ref cp
+left join course c on cp.COURSE_ID = c.id
+group by c."NAME"
+order by total desc
+fetch first 1 rows only;
 
 </pre>
