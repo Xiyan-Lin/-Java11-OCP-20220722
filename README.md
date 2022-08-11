@@ -108,4 +108,19 @@ select sum(c.PRICE) as total
 from course_person_ref cp, course c
 where cp.PERSON_ID = 2 and cp.COURSE_ID = c.ID;
 
+-- 查出所有人的上課總費用各是多少 ?
+select p.USERNAME, cp.COURSE_ID, c.PRICE
+from person p, course_person_ref cp, course c
+where p.ID = cp.PERSON_ID and cp.COURSE_ID = c.ID;
+
+select p.USERNAME, c.PRICE
+from person p, course_person_ref cp, course c
+where p.ID = cp.PERSON_ID and cp.COURSE_ID = c.ID;
+
+select p.USERNAME, sum(c.PRICE) as total, count(p.USERNAME) as count
+from person p, course_person_ref cp, course c
+where p.ID = cp.PERSON_ID and cp.COURSE_ID = c.ID
+group by p.USERNAME
+order by total desc;  -- desc 大->小排序, asc(預設) 小->大排序
+
 </pre>
