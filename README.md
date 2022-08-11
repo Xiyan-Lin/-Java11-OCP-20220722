@@ -6,11 +6,11 @@ Derby 資料庫下載
 https://db.apache.org/derby/derby_downloads.html
 
 pom.xml 依賴配置
-<dependency>
-    <groupId>org.apache.derby</groupId>
-    <artifactId>derby</artifactId>
-    <version>10.14.2.0</version>
-</dependency>
+&lt;dependency>
+    &lt;groupId>org.apache.derby&lt;/groupId>
+    &lt;artifactId>derby&lt;/artifactId>
+    &lt;version>10.14.2.0&lt;/version>
+&lt;/dependency>
 
 SQL 語法 for Derby 資料庫
 https://www.tutorialspoint.com/apache_derby/apache_derby_create_table.htm
