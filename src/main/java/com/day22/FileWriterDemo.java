@@ -9,8 +9,10 @@ public class FileWriterDemo {
     public static void main(String[] args) {
         String lotto = getLotto();
         File filePath = new File("src/main/java/com/day22/data/lotto.txt");
-        try(FileWriter fw = new FileWriter(filePath)) {
+        boolean append = true; // 是否要保留原始資料
+        try(FileWriter fw = new FileWriter(filePath, append)) {
             fw.write(lotto); // 寫入資料
+            fw.write("\n"); // 寫入換行
             System.out.println("寫入成功");
         } catch (IOException e) {
             System.out.println("寫入失敗");
@@ -24,6 +26,6 @@ public class FileWriterDemo {
         int n1 = random.nextInt(10);
         int n2 = random.nextInt(10);
         int n3 = random.nextInt(10);
-        return String.format("[%d, %d, %d]", n1, n2, n3);
+        return String.format("%d, %d, %d", n1, n2, n3);
     }
 }
