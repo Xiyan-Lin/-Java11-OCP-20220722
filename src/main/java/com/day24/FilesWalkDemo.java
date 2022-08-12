@@ -12,7 +12,9 @@ public class FilesWalkDemo {
     static int count = 0;
     // 深度走訪器
     public static void main(String[] args) throws Exception {
-        Stream<Path> paths = Files.walk(Paths.get("src/"));
+        Stream<Path> paths = Files.walk(Paths.get("src/")); 
+        //Stream<Path> paths = Files.walk(Paths.get("C:\\Users\\MB-207\\javacode")); 
+        
         paths.filter(path -> path.getFileName().toString().contains(".java"))
              .forEach(path -> {
                 //System.out.println((++count) + " : " + path.toAbsolutePath());
