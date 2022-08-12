@@ -10,9 +10,16 @@ public class CreateFolder {
         File folderUrl = new File(url);
         // 檢查 folderUrl 是否存在 ?
         if(folderUrl.exists()) {
-            System.out.println(folderUrl + "已存在");
+            System.out.println(folderUrl + " 已存在");
         } else {
-            System.out.println(folderUrl + "尚未存在");
+            System.out.println(folderUrl + " 尚未存在");
+            // 建立資料夾
+            boolean success = folderUrl.mkdir();
+            if(success) {
+                System.out.println(folderUrl + " 建立成功");
+            } else {
+                System.out.println(folderUrl + " 建立失敗");
+            }
         }
     }
 }
