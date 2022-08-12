@@ -10,6 +10,8 @@ public class PathReadFileDemo3 {
         Path path = Paths.get("src/main/java/com/day22/data/lotto.txt");
         // 讀取資料: Files.readAllLines() 得到 List 集合
         List<String> list = Files.readAllLines(path);
+        //System.out.println(list.get(0));
+        //System.out.println(list.get(1));
         list.forEach(System.out::println);
         
     }
