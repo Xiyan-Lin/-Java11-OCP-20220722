@@ -11,7 +11,8 @@ public class ForkJoinDemo {
         // start time
         long startTime = System.currentTimeMillis();
         // 執行
-        int total = ForkJoinPool.commonPool().invoke(task);
+        //int total = ForkJoinPool.commonPool().invoke(task); // 動態預設使用內核數量
+        int total = new ForkJoinPool(4).invoke(task); // 固定使用內核數量
         // end time 
         long endTime = System.currentTimeMillis();
         System.out.printf("ForkJoin total: %d time: %d ms\n", total, (endTime - startTime));
