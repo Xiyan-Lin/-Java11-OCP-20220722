@@ -27,14 +27,14 @@ public class SumTask extends RecursiveTask<Integer>{
             return sum;
         }
         // 2. 任務一分為二
-        int middle = (end - start) / 2;
+        int middle = (end + start) / 2;
         System.out.printf("拆分 %d~%d ==> %d~%d, %d~%d\n", start, end, start, middle, middle, end);
-        // 3. 分裂任務
+        // 3. 分裂任務(fork)
         SumTask subTask1 = new SumTask(array, start, middle);
         SumTask subTask2 = new SumTask(array, middle, end);
         // 4. 任務運行
         invokeAll(subTask1, subTask2);
-        // 5. 獲得子任務結果
+        // 5. 獲得子任務結果(join)
         int result1 = subTask1.join();
         int result2 = subTask2.join();
         // 6. 匯總結果
