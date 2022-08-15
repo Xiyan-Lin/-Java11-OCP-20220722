@@ -2,12 +2,11 @@ package com.day25;
 
 import java.util.Date;
 import java.util.Random;
-import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class ScheduleWithFixedDelayDemo {
+public class ScheduleAtFixedRateDemo {
     public static void main(String[] args) {
         Runnable job = () -> {
             System.out.print("begin: " + new Date());
@@ -21,7 +20,7 @@ public class ScheduleWithFixedDelayDemo {
         };
         
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-        service.scheduleWithFixedDelay(job, 1, 2, TimeUnit.SECONDS); // 工作, 初始delay(1秒), 每次delay(2秒), 時間單位
+        service.scheduleAtFixedRate(job, 1, 3, TimeUnit.SECONDS); // 工作, 初始delay(1秒), delay頻率(3秒), 時間單位
         
     }
 }
