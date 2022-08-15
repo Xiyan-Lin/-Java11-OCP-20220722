@@ -2,6 +2,8 @@ package com.day25;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 class Task implements Runnable {
@@ -22,5 +24,19 @@ class LongTask implements Callable {
 }
 
 public class ExecutorDemo3 {
-    
+    public static void main(String[] args) throws Exception {
+        ExecutorService service = Executors.newCachedThreadPool();
+        service.submit(new LongTask());
+        service.submit(new Task());
+        service.submit(new LongTask());
+        service.submit(new Task());
+        service.submit(new Task());
+        service.shutdown();
+        
+        // 偵測執行緒池是否有關閉 ?
+        while (!service.awaitTermination(1, TimeUnit.SECONDS)) {            
+            System.out.println("執行緒池尚未關閉");
+        }
+        System.out.println("執行緒池已關閉");
+    }
 }
