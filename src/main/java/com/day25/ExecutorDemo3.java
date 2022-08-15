@@ -31,7 +31,9 @@ public class ExecutorDemo3 {
         service.submit(new LongTask());
         service.submit(new Task());
         service.submit(new Task());
-        service.shutdown();
+        // 下達了平滑關閉指令(會等待所有工作任務都結束之後才會關閉)
+        service.shutdown(); // service.shutdownNow(); // 強制關閉(不會等待所有工作任務是否都結束)
+        
         
         // 偵測執行緒池是否有關閉 ?
         while (!service.awaitTermination(1, TimeUnit.SECONDS)) {            
